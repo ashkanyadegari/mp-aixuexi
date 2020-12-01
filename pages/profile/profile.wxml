@@ -35,7 +35,7 @@
         o
       </view>
     </view>
-    <navigator class="btn" >Continue</navigator>
+    <navigator bindtap="goToShow" class="btn" >Continue</navigator>
   </view>
   <view class="course-card">
     <view class="course-content">
@@ -48,7 +48,7 @@
         o
       </view>
     </view>
-    <navigator class="btn" >Continue</navigator>
+    <navigator bindtap="goToShow" class="btn" >Continue</navigator>
   </view>
   <view class="course-card">
     <view class="course-content">
@@ -61,6 +61,6 @@
         o
       </view>
     </view>
-    <navigator class="btn" >Continue</navigator>
+    <navigator bindtap="goToShow" class="btn" >Continue</navigator>
   </view>
 </view>

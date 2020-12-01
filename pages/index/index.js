@@ -9,6 +9,13 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+
+  goToShow: function() {
+    wx.navigateTo({
+      url: '/pages/show/show',
+    })
+  },
+  
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

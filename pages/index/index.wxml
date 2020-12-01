@@ -17,7 +17,7 @@
 </view>
   <view class="card-product-infos">
     <!-- <button class="btn-flat" form-type="submit">Continue</button> -->
-    <navigator class="btn-flat" url="#">Continue</navigator>
+    <navigator bindtap="goToShow" class="btn-flat" url="#">Continue</navigator>
     <view class="avatars">
       <span class="avatar">
         <image src="https://picsum.photos/70"/>
@@ -47,7 +47,7 @@
     </view>
   </view>
   <view class="card-product-infos">
-    <navigator class="btn-flat" url="#">Continue</navigator>
+    <navigator bindtap="goToShow" class="btn-flat" url="#">Continue</navigator>
   </view>
 </view>
 </view>
@@ -62,7 +62,7 @@
     </view>
   </view>
   <view class="card-product-infos">
-    <navigator class="btn-flat" url="#">Continue</navigator>
+    <navigator bindtap="goToShow" class="btn-flat" url="#">Continue</navigator>
   </view>
 </view>
 </view>
@@ -77,7 +77,7 @@
     </view>
   </view>
   <view class="card-product-infos">
-    <navigator class="btn-flat" url="#">Continue</navigator>
+    <navigator bindtap="goToShow" class="btn-flat" url="#">Continue</navigator>
   </view>
 </view>
 </view>
