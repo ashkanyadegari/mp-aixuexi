@@ -9,8 +9,8 @@
 
 <view class="page-content">
   <view class="course-description">
-    <view class="h3">What is waste?</view>
-    <view class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, ad?</view>
+    <view class="h3">What is Sustainability?</view>
+    <view class="p">One of the biggest buzzwords within the bar industry today is “sustainability.”  In the context of an everyday bar, it can mean everything from simply getting rid of plastic straws to a much more strategic approach that involves reducing the overall carbon footprint of the bar.</view>
   </view>
 
   <view class="h3">Related Course</view>
@@ -18,8 +18,8 @@
     <view class="course-content">
       <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
       <view class="course-info">
-        <view class="h4">Sustainibility in Bars</view>
-        <text class="p">Sustainibility in Bars: Run in bars</text>
+        <view class="h4">Reduce ice consumption</view>
+        <view class="p descr">Creating ice takes both water, energy</view>
       </view>
       <view class="round-progress">
         o
