@@ -1,12 +1,83 @@
+
 <!--index.wxml-->
-<view class="card-product">
-  <image src="https://picsum.photos/id/1/200/300"/>
-  <view class="card-product-infos">
-    <view class="h2">Product name</view>
-    Product description
-    <!-- <image class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
-    <image class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-    <image class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
-    <image class="avatar-square" alt="avatar-square" src="https://kitt.lewagon.com/placeholder/users/krokrob" /> -->
+<view class="title">Today</view>
+<view class="main-card">
+<view class="first-product">
+  <view class="primary-card">
+    <image class='first-image' src="https://picsum.photos/id/1/300" />
+    <view>
+      <view class="h1">Sustainability in Bars</view>
+      <text>Learn about all the things that are just wrong</text>
+    </view>
   </view>
+<view class="progress">
+  <view class="progress-box">
+      <progress percent="80" border-radius='5' activeColor='#FE564D'/>
+      </view>
+</view>
+  <view class="card-product-infos">
+    <!-- <button class="btn-flat" form-type="submit">Continue</button> -->
+    <navigator class="btn-flat" url="#">Continue</navigator>
+    <view class="avatars">
+      <span class="avatar">
+        <image src="https://picsum.photos/70"/>
+      </span>
+      <span class="avatar">
+        <image src="https://picsum.photos/80"/>
+      </span>
+      <span class="avatar">
+        <image src="https://picsum.photos/90"/>
+      </span>
+      <span class="avatar">
+        <image src="https://picsum.photos/100"/>
+      </span>
+    </view>
+  </view>
+</view>
+</view>
+
+<view class="body">Explore More</view>
+<view class="second">
+<view class="card-product">
+  <view class="first-card">
+    <image class='first-image' src="https://picsum.photos/id/1/300" />
+    <view>
+      <view class="h1">Sustainability in Bars</view>
+      <text>Learn about all the things that are just wrong</text>
+    </view>
+  </view>
+  <view class="card-product-infos">
+    <navigator class="btn-flat" url="#">Continue</navigator>
+  </view>
+</view>
+</view>
+
+<view class="third">
+<view class="card-product">
+  <view class="first-card">
+    <image class='first-image' src="https://picsum.photos/id/1/300" />
+    <view>
+      <view class="h1">Sustainability in Bars</view>
+      <text>Learn about all the things that are just wrong</text>
+    </view>
+  </view>
+  <view class="card-product-infos">
+    <navigator class="btn-flat" url="#">Continue</navigator>
+  </view>
+</view>
+</view>
+
+<view class="fourth">
+<view class="card-product">
+  <view class="first-card">
+    <image class='first-image' src="https://picsum.photos/id/1/300" />
+    <view>
+      <view class="h1">Sustainability in Bars</view>
+      <text>Learn about all the things that are just wrong</text>
+    </view>
+  </view>
+  <view class="card-product-infos">
+    <navigator class="btn-flat" url="#">Continue</navigator>
+  </view>
+</view>
 </view>
