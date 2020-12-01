@@ -1,57 +1,130 @@
 /**index.wxss**/
-.card-product {
+.title{
+  height: 100rpx;
+  font-size: large;
+  color: #1B2A59;
+  font-weight: bold;
+}
+.first-product  {
   overflow: hidden;
-  height: 120px;
+  height: 400rpx;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 20rpx;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+  position: relative;
+  width: 700rpx;
+}
+.primary-card {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+.main-card {
+  display: flex;
+  justify-content: center;
+}
+.second {
+  display: flex;
+  justify-content: center;
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+.third {
+  display: flex;
+  justify-content: center;
 }
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+.fourth {
+  display: flex;
+  justify-content: center;
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
+.avatar:not(:first-child) {
+  margin-left: -30rpx;
+  /* -webkit-mask:radial-gradient(circle 55rpx at 5rpx 50%,transparent 99%,#fff 100%); */
+  mask:radial-gradient(circle 55rpx at 5rpx 50%,transparent 99%,#fff 100%);
 }
-
 .avatar {
-  width: 40px;
+  display: inline-block;
   border-radius: 50%;
+  overflow: hidden;
+  width: 80rpx;
+  height: 80rpx;
+}
+.avatars image {
+  width: 100%;
+  display: block;
 }
 
-.avatar-large {
-  width: 56px;
-  border-radius: 50%;
+.body{
+  height: 100rpx;
+  font-size: large;
+  color: #1B2A59;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+.card-product  {
+  overflow: hidden;
+  height: 300rpx;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 20rpx;
+  margin-top: 15rpx;
+  position: relative;
+  width: 700rpx;
+  margin-bottom: 15rpx;
+}
+.first-card {
+  display: flex;
+  justify-content: space-around;
+}
+.first-image {
+  height: 130rpx;
+  width: 300rpx;
+  object-fit: cover;
+  padding: 50rpx 50rpx;
+  border-radius: 20rpx;
 }
 
-.avatar-bordered {
-  width: 40px;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
+.btn-flat {
+  color: white;
+  padding: 10rpx 10rpx;
+  border-radius: 10rpx;
+  width: 150rpx;
+  background:#1B2A59 ;
+  font-size: 25rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+}
+.h1 {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 30rpx;
+}
+text {
+  font-size: 12px;
+}
+.progress {
+  width: 90%;
+  text-align: center;
+}
+.wx-progress-inner-bar {
+  border-radius: 8rpx;
+  background: linear-gradient(to right, #F2C1BD, #1B2A59);  
+}
+.card-product .card-product-infos {
+  padding: 30rpx;
 }
 
-.avatar-square {
-  width: 40px;
-  border-radius: 0px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
+.avatars {
+  position: absolute;
+  left: 10px;
+  bottom: -65px;
+}
+
+.card-product-infos {
+  position: relative;
 }
