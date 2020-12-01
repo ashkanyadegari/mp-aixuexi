@@ -1,47 +1,92 @@
 /**index.wxss**/
+
+/* Fonts */
+.h1 {
+  font-size: 56rpx;
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+
+.h2 {
+  font-size: 32rpx;
+  font-weight: bolder;
+}
+
+.h4 {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.p {
+  font-size: 0.8rem;
+}
+
+.h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* End of Fonts */
+
+.background {
+  background-color: #1B2A59;
+  height: 25vh;
+  border-radius: 0 0 20rpx 20rpx;
+  position: relative;
+}
+
 .title{
   height: 100rpx;
   font-size: large;
-  color: #1B2A59;
+  color: white;
   font-weight: bold;
 }
-.first-product  {
-  overflow: hidden;
-  height: 400rpx;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 20rpx;
-  margin-top: 15rpx;
-  margin-bottom: 15rpx;
-  position: relative;
-  width: 700rpx;
-}
-.primary-card {
-  display: flex;
-  justify-content: space-around;
-}
 
+/* hero card */
 .main-card {
   display: flex;
   justify-content: center;
 }
-.second {
+
+.hero-course  {
+  height: 350rpx;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 20rpx;
+  margin-bottom: 15rpx;
+  position: relative;
+  margin-top: 70px;
+  width: 90vw;
+  padding: 20rpx;
+}
+.course-content {
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.third {
-  display: flex;
-  justify-content: center;
+.course-text {
+  margin-left: 15rpx;
 }
 
-.fourth {
-  display: flex;
-  justify-content: center;
+.hero-image {
+  min-height: 180rpx;
+  max-height: 180rpx;
+  min-width: 180rpx;
+  max-width: 180rpx;
+  border-radius: 20rpx;
 }
 
+/* hero content end */
+
+/* Avatar Group */
 .avatar:not(:first-child) {
-  margin-left: -30rpx;
+  margin-left: -10rpx;
   /* -webkit-mask:radial-gradient(circle 55rpx at 5rpx 50%,transparent 99%,#fff 100%); */
   mask:radial-gradient(circle 55rpx at 5rpx 50%,transparent 99%,#fff 100%);
 }
@@ -49,43 +94,26 @@
   display: inline-block;
   border-radius: 50%;
   overflow: hidden;
-  width: 80rpx;
-  height: 80rpx;
+  width: 60rpx;
+  height: 60rpx;
 }
-.avatars image {
-  width: 100%;
-  display: block;
+/*  */
+/* Avatar Group */
+
+/* .card-product .card-product-infos {
+  padding: 30rpx;
+} */
+
+/* .avatars {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+} */
+
+.card-product-infos {
+  position: relative;
 }
 
-.body{
-  height: 100rpx;
-  font-size: large;
-  color: #1B2A59;
-  font-weight: bold;
-  margin-top: 20rpx;
-}
-.card-product  {
-  overflow: hidden;
-  height: 300rpx;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 20rpx;
-  margin-top: 15rpx;
-  position: relative;
-  width: 700rpx;
-  margin-bottom: 15rpx;
-}
-.first-card {
-  display: flex;
-  justify-content: space-around;
-}
-.first-image {
-  height: 130rpx;
-  width: 300rpx;
-  object-fit: cover;
-  padding: 50rpx 50rpx;
-  border-radius: 20rpx;
-}
 
 .btn-flat {
   color: white;
@@ -99,32 +127,75 @@
   bottom: 5px;
   right: 15px;
 }
-.h1 {
-  font-size: 30rpx;
-  font-weight: bold;
-  margin-top: 30rpx;
-}
+
 text {
   font-size: 12px;
 }
-.progress {
-  width: 90%;
-  text-align: center;
-}
+/* Progress Bar */
 .wx-progress-inner-bar {
-  border-radius: 8rpx;
-  background: linear-gradient(to right, #F2C1BD, #1B2A59);  
-}
-.card-product .card-product-infos {
-  padding: 30rpx;
+  border-radius: 8rpx !important;
+  background: linear-gradient(to right, #F2C1BD, #1B2A59) !important;
 }
 
-.avatars {
-  position: absolute;
-  left: 10px;
-  bottom: -65px;
+.progress-box {
+  margin: 20px 0;
+  width: 92%;
 }
 
-.card-product-infos {
+.progress {
+  display: flex;
+  justify-content: space-around;
+}
+/* End of Progress Bar */
+
+
+/* Course cards */
+
+.course-card {
+  background-color: white;
+  box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
+  border-radius: 10rpx;
+  padding: 25rpx;
+  height: 100px;
   position: relative;
+  margin-bottom: 5px;
+}
+
+.course-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-info {
+  margin-left: 8px;
+}
+
+.course-image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.h4 {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.btn {
+  background-color: #1B2A59;
+  color: white;
+  text-align: center;
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 10rpx;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 0.9rem;
+
+}
+
+.page-content {
+  margin-top: 25px;
+  padding: 0 15px;
 }

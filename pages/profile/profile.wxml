@@ -32,7 +32,7 @@
         <text class="p">Sustainibility in Bars: Run in bars</text>
       </view>
       <view class="round-progress">
-        o
+        <wux-circle percent="80" color="#F2C1BD" size="30" strokeWidth="4">p</wux-circle>
       </view>
     </view>
     <navigator bindtap="goToShow" class="btn" >Continue</navigator>
@@ -45,7 +45,7 @@
         <text class="p">Sustainibility in Bars: Run in bars</text>
       </view>
       <view class="round-progress">
-        o
+        <wux-circle percent="50" color="#F2C1BD" size="30" strokeWidth="4">p</wux-circle>
       </view>
     </view>
     <navigator bindtap="goToShow" class="btn" >Continue</navigator>
@@ -58,7 +58,7 @@
         <text class="p">Sustainibility in Bars: Run in bars</text>
       </view>
       <view class="round-progress">
-        o
+        <wux-circle percent="30" color="#F2C1BD" size="30" strokeWidth="4">p</wux-circle>
       </view>
     </view>
     <navigator bindtap="goToShow" class="btn" >Continue</navigator>
