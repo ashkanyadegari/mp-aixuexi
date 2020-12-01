@@ -1,13 +1,12 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+<view class="card-product">
+  <image src="https://picsum.photos/id/1/200/300"/>
+  <view class="card-product-infos">
+    <view class="h2">Product name</view>
+    Product description
+    <!-- <image class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
+    <image class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+    <image class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
+    <image class="avatar-square" alt="avatar-square" src="https://kitt.lewagon.com/placeholder/users/krokrob" /> -->
   </view>
 </view>
