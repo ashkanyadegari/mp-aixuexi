@@ -4,7 +4,7 @@
   <view class="profile">
   <view class="profile-card">
     <view class="profile-card-info">
-      <image class="profile-image" src="https://picsum.photos/200/"/>
+      <image class="profile-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
       <view class="profile-content">
         <view class="h2">Seb Saunier</view>
         <view class="p">General Manager Le Wagon</view>
@@ -26,7 +26,7 @@
   <view class="h3">My Courses</view>
   <view class="course-card">
     <view class="course-content">
-      <image class="course-image" src="https://picsum.photos/200/"/>
+      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
       <view class="course-info">
         <view class="h4">Sustainibility in Bars</view>
         <text class="p">Sustainibility in Bars: Run in bars</text>
@@ -39,7 +39,7 @@
   </view>
   <view class="course-card">
     <view class="course-content">
-      <image class="course-image" src="https://picsum.photos/200/"/>
+      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
       <view class="course-info">
         <view class="h4">Sustainibility in Bars</view>
         <text class="p">Sustainibility in Bars: Run in bars</text>
@@ -52,7 +52,7 @@
   </view>
   <view class="course-card">
     <view class="course-content">
-      <image class="course-image" src="https://picsum.photos/200/"/>
+      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
       <view class="course-info">
         <view class="h4">Sustainibility in Bars</view>
         <text class="p">Sustainibility in Bars: Run in bars</text>

@@ -5,7 +5,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    video: "https://lewagon.oss-cn-beijing.aliyuncs.com/videoplayback.mp4"
   },
 
   /**

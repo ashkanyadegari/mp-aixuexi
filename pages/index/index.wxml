@@ -4,7 +4,7 @@
 <view class="main-card">
 <view class="first-product">
   <view class="primary-card">
-    <image class='first-image' src="https://picsum.photos/id/1/300" />
+    <image class='first-image' src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127" />
     <view>
       <view class="h1">Sustainability in Bars</view>
       <text>Learn about all the things that are just wrong</text>
@@ -20,16 +20,16 @@
     <navigator bindtap="goToShow" class="btn-flat" url="#">Continue</navigator>
     <view class="avatars">
       <span class="avatar">
-        <image src="https://picsum.photos/70"/>
+        <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
       </span>
       <span class="avatar">
-        <image src="https://picsum.photos/80"/>
+        <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
       </span>
       <span class="avatar">
-        <image src="https://picsum.photos/90"/>
+        <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
       </span>
       <span class="avatar">
-        <image src="https://picsum.photos/100"/>
+        <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
       </span>
     </view>
   </view>
@@ -40,7 +40,7 @@
 <view class="second">
 <view class="card-product">
   <view class="first-card">
-    <image class='first-image' src="https://picsum.photos/id/1/300" />
+    <image class='first-image' src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127" />
     <view>
       <view class="h1">Sustainability in Bars</view>
       <text>Learn about all the things that are just wrong</text>
@@ -55,7 +55,7 @@
 <view class="third">
 <view class="card-product">
   <view class="first-card">
-    <image class='first-image' src="https://picsum.photos/id/1/300" />
+    <image class='first-image' src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127" />
     <view>
       <view class="h1">Sustainability in Bars</view>
       <text>Learn about all the things that are just wrong</text>
@@ -70,7 +70,7 @@
 <view class="fourth">
 <view class="card-product">
   <view class="first-card">
-    <image class='first-image' src="https://picsum.photos/id/1/300" />
+    <image class='first-image' src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127" />
     <view>
       <view class="h1">Sustainability in Bars</view>
       <text>Learn about all the things that are just wrong</text>

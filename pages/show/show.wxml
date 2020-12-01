@@ -2,9 +2,8 @@
 <view class="background">
   <view class="h1">Course 1: Bars</view>
   <view class="video">
-    <view class="video-card">
-      <image class="play-button" src="/img/play.svg"/>
-    </view>
+      <!-- <image class="play-button" src="/img/play.svg"/> -->
+      <video class="my-video" src="{{video}}" style="width:100% height:100px"></video>
   </view>
 </view>
 
@@ -17,7 +16,7 @@
   <view class="h3">Related Course</view>
   <view class="course-card">
     <view class="course-content">
-      <image class="course-image" src="https://picsum.photos/200/"/>
+      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
       <view class="course-info">
         <view class="h4">Sustainibility in Bars</view>
         <text class="p">Sustainibility in Bars: Run in bars</text>
