@@ -26,6 +26,6 @@
         o
       </view>
     </view>
-    <navigator class="btn" >Continue</navigator>
+    <!-- <navigator bindtap="goToShow" class="btn" >Continue</navigator> -->
   </view>
 </view>

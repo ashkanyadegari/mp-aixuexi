@@ -8,6 +8,12 @@ Page({
 
   },
 
+  goToShow: function() {
+    wx.navigateTo({
+      url: '/pages/show/show',
+    })
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
