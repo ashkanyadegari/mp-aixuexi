@@ -40,7 +40,7 @@
   min-width: 90vw;
   /* margin: 14px; */
   height: 250rpx;
-  bottom: -45px;
+  bottom: -60px;
   box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
   padding: 15px 5px;
   border-radius: 15rpx;
@@ -154,4 +154,8 @@
   top: 50%;
   transform: translate3d(0,-50%,0);
   line-height: 1
+}
+
+.profile-content {
+  margin-left: 15px;
 }

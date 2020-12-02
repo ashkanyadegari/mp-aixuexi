@@ -4,12 +4,12 @@
 <view class="h1">Today</view>
 <view class="hero">
   <view class="main-card">
-    <view class="hero-course">
+    <view class="hero-course" data-id="{{courses[3].id}}">
       <view class="course-content">
-        <image class='hero-image' src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127" />
+        <image class='hero-image' src="{{courses[3].photos[0]}}" />
         <view class="course-text">
-          <view class="h2">Sustainability in Bars</view>
-          <text> it will be much easier to upcycle some of the ingredients used during the preparation of cocktails</text>
+          <view class="h2">{{courses[3].name}}</view>
+          <text class="nodesc"> {{courses[3].description}}</text>
         </view>
       </view>
       <view class="progress">
@@ -18,20 +18,20 @@
           </view>
       </view>
       <view class="card-product-infos">
-        <navigator bindtap="goToShow" class="btn-flat" url="#">Continue</navigator>
+        <navigator bindtap="goToShow" data-id="{{courses[3].id}}" class="btn-flat" url="#">Continue</navigator>
         <view class="avatars">
           <span class="avatar">
-            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
+            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/photo-1491349174775-aaafddd81942.jpeg"/>
+          </span>
+          <!-- <span class="avatar">
+            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/photo-1542103749-8ef59b94f47e.jpeg"/>
           </span>
           <span class="avatar">
-            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
+            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/photo-1544005313-94ddf0286df2.jpeg"/>
           </span>
           <span class="avatar">
-            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
-          </span>
-          <span class="avatar">
-            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
-          </span>
+            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/photo-1570612861542-284f4c12e75f.jpeg"/>
+          </span> -->
         </view>
       </view>
     </view>
@@ -40,34 +40,19 @@
 
 <view class="page-content">
 <view class="h3">Explore More</view>
-<view class="course-card">
+<view class="cards" wx:for="{{courses}}" wx:for-item="course">
+<view class="course-card" data-id="{{course.id}}">
     <view class="course-content">
-      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
+      <image class="course-image" src="{{course.photos[0]}}"/>
       <view class="course-info">
-        <view class="h4">Reduce ice consumption</view>
-        <view class="p descr">Creating ice takes both water, energy</view>
+        <view class="h4">{{course.name}}</view>
+        <view class="p descr">{{course.description}}</view>
       </view>
-      <view class="round-progress">
-        o
-      </view>
-    </view>
-    <navigator bindtap="goToShow" class="btn" >Start</navigator>
-  </view>
 
-  <view class="course-card">
-    <view class="course-content">
-      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
-      <view class="course-info">
-        <view class="h4">Reduce ice consumption</view>
-        <view class="p descr">Creating ice takes both water, energy</view>
-      </view>
-      <view class="round-progress">
-        o
-      </view>
     </view>
-    <navigator bindtap="goToShow" class="btn" >Start</navigator>
+    <navigator data-id="{{course.id}}" bindtap="goToShow" class="btn" >Start</navigator>
   </view>
-
+</view>
   
 </view>
 </view>
