@@ -12,12 +12,24 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    console.log(options.id)
+    const id = options.id
+    let page = this
+    
+    wx.request({
+      url: `https://aixuexi.wogengapp.cn/api/v1/courses/${id}`,
+      success(res){
+        console.log(res.data)
+        const course = res.data
+        page.setData(course)
+      }
+    })
 
   },
 
   goToShow: function() {
-    wx.navigateTo({
-      url: '/pages/show/show',
+    wx.switchTab({
+      url: '/pages/index/index',
     })
   },
 

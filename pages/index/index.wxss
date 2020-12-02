@@ -171,8 +171,10 @@ text {
 }
 
 .course-image {
-  width: 150rpx;
-  height: 150rpx;
+  min-width: 150rpx;
+  max-height: 150rpx;
+  max-width: 150rpx;
+  min-height: 150rpx;
   border-radius: 10rpx;
 }
 
@@ -198,4 +200,11 @@ text {
 .page-content {
   margin-top: 25px;
   padding: 0 15px;
+}
+
+.descr {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 250px;
 }

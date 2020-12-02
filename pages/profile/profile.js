@@ -1,4 +1,6 @@
 // pages/profile/profile.js
+let app = getApp();
+
 Page({
 
   /**
@@ -10,8 +12,18 @@ Page({
 
   goToShow: function() {
     wx.navigateTo({
-      url: '/pages/show/show',
+      url: '/pages/show/show?id=27',
     })
+  },
+
+  getUserInfo: function (event) {
+    console.log(event)
+    app.globalData.userInfo = event.detail.userInfo
+    console.log(app.globalData.userInfo)
+    this.setData({
+      userInfo: event.detail.userInfo
+    })
+    console.log(this.data.userInfo)
   },
 
   /**

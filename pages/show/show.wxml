@@ -1,6 +1,6 @@
 <!--pages/show/show.wxml-->
 <view class="background">
-  <view class="h1">Course 1: Bars</view>
+  <view class="h1">Course {{id}}: {{name}}</view>
   <view class="video">
       <!-- <image class="play-button" src="/img/play.svg"/> -->
       <video class="my-video" src="{{video}}" style="width:100% height:100px"></video>
@@ -9,14 +9,14 @@
 
 <view class="page-content">
   <view class="course-description">
-    <view class="h3">What is Sustainability?</view>
-    <view class="p">One of the biggest buzzwords within the bar industry today is “sustainability.”  In the context of an everyday bar, it can mean everything from simply getting rid of plastic straws to a much more strategic approach that involves reducing the overall carbon footprint of the bar.</view>
+    <view class="h3">{{name}}</view>
+    <view class="p">{{description}}</view>
   </view>
 
   <view class="h3">Related Course</view>
   <view class="course-card">
     <view class="course-content">
-      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
+      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/qptxrc2mbny2bi62gu41xw1i0b5q"/>
       <view class="course-info">
         <view class="h4">Reduce ice consumption</view>
         <view class="p descr">Creating ice takes both water, energy</view>
@@ -25,6 +25,6 @@
         o
       </view>
     </view>
-    <!-- <navigator bindtap="goToShow" class="btn" >Continue</navigator> -->
+    <navigator bindtap="goToShow" class="btn" >See More</navigator>
   </view>
 </view>

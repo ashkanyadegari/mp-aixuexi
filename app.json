@@ -5,10 +5,23 @@
     "pages/show/show",
     "pages/profile/profile"
   ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "Home",
+      "selectedIconPath": "/img/home.png",
+      "iconPath": "/img/home.png"
+    }, {
+      "pagePath": "pages/profile/profile",
+      "text": "Profile",
+      "selectedIconPath": "/img/Profile.png",
+      "iconPath": "/img/Profile.png"
+    }]
+  },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "Ai Xue Xi",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",

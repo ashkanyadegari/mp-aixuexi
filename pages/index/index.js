@@ -10,9 +10,11 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
-  goToShow: function() {
+  goToShow: function(event) {
+    const id = event.currentTarget.dataset.id
+    console.log(event)
     wx.navigateTo({
-      url: '/pages/show/show',
+      url: `/pages/show/show?id=${id}`,
     })
   },
   
@@ -23,32 +25,15 @@ Page({
     })
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
+    let page = this
+    wx.request({
+      url: 'https://aixuexi.wogengapp.cn/api/v1/courses',
+      success(res){
+        console.log(res.data.courses)
+        const courses = res.data.courses
+        page.setData({courses})
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    })
   },
   getUserInfo: function(e) {
     console.log(e)

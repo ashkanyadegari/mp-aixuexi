@@ -4,15 +4,16 @@
   <view class="profile">
   <view class="profile-card">
     <view class="profile-card-info">
-      <image class="profile-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
+      <!-- <image class="profile-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/> -->
       <view class="profile-content">
-        <view class="h2">Seb Saunier</view>
-        <view class="p">General Manager Le Wagon</view>
+        <view class="h2">Welcome to AXX</view>
+       
+        <view class="p">Here is your progress</view>
       </view>
     </view>
     <view class="progress">
       <view class="progress-box">
-          <progress percent="45" border-radius='5' stroke-width="9" activeColor="#FE564D"/>
+          <progress percent="80" border-radius='5' stroke-width="9" activeColor="#FE564D"/>
       </view>
     </view>
     <view class="points">
@@ -23,36 +24,10 @@
 </view>
 
 <view class="page-content">
-  <view class="h3">My Courses</view>
+  <view class="h3">Suggested Courses</view>
   <view class="course-card">
     <view class="course-content">
-      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
-      <view class="course-info">
-        <view class="h4">Sustainibility in Bars</view>
-        <text class="p">Sustainibility in Bars: Run in bars</text>
-      </view>
-      <view class="round-progress">
-        <wux-circle percent="80" color="#F2C1BD" size="30" strokeWidth="4">p</wux-circle>
-      </view>
-    </view>
-    <navigator bindtap="goToShow" class="btn" >Continue</navigator>
-  </view>
-  <view class="course-card">
-    <view class="course-content">
-      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
-      <view class="course-info">
-        <view class="h4">Sustainibility in Bars</view>
-        <text class="p">Sustainibility in Bars: Run in bars</text>
-      </view>
-      <view class="round-progress">
-        <wux-circle percent="50" color="#F2C1BD" size="30" strokeWidth="4">p</wux-circle>
-      </view>
-    </view>
-    <navigator bindtap="goToShow" class="btn" >Continue</navigator>
-  </view>
-  <view class="course-card">
-    <view class="course-content">
-      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/de3mxi5dsg1qtuepwx3ai9ka6127"/>
+      <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/photo-1491349174775-aaafddd81942.jpeg"/>
       <view class="course-info">
         <view class="h4">Sustainibility in Bars</view>
         <text class="p">Sustainibility in Bars: Run in bars</text>
@@ -61,6 +36,6 @@
         <wux-circle percent="30" color="#F2C1BD" size="30" strokeWidth="4">p</wux-circle>
       </view>
     </view>
-    <navigator bindtap="goToShow" class="btn" >Continue</navigator>
+    <navigator bindtap="goToShow" class="btn" url="#" >See More</navigator>
   </view>
 </view>
