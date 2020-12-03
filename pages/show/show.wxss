@@ -36,7 +36,6 @@
 }
 
 .video-card {
-  background: url(https://picsum.photos/600);
   object-fit: cover;
   position: absolute;
   min-width: 90vw;
@@ -49,6 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 15px;
 }
 
 .play-button {
