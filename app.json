@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/show/show",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/quiz/quiz",
+    "pages/sandbox/sandbox"
   ],
   "tabBar": {
     "list": [{

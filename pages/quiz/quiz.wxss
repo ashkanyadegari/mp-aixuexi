@@ -1,0 +1,22 @@
+/* pages/quiz/quiz.wxss */
+
+.background {
+  background-color: #1B2A59;
+  height: 25vh;
+  border-radius: 0 0 20rpx 20rpx;
+  position: relative;
+}
+
+.question {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 90vw;
+  margin: 100px 0;
+}
+
+.main-question {
+  display: flex;
+  justify-content: space-around;
+}

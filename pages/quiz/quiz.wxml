@@ -1,0 +1,25 @@
+<!--pages/quiz/quiz.wxml-->
+<view class="background">
+  <view class="main-question">
+  <view class="question">
+    <view class="Timer">Timer</view>
+    <view class="question-details">
+      <view class="quiz-no">Q{{currentQuestionId + 1}}: </view>
+      <view class="quiz-question">{{questions[currentQuestionId].question}}</view>
+    </view>
+    <view class="choices">
+      <radio-group class="radio-group">
+        <view wx:for="{{questions[currentQuestionId].choices}}" wx:for-item="choice">
+          <label data-choice-id="{{choice.id}}" data-question-id="{{choice.question_id}}"class="radio" bindtap="chooseAnswer">
+            <radio value="{{choice.answer}}" data-choice-id="{{choice.id}}" />{{choice.answer}}
+          </label>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+</view>
+  <button wx:if="{{currentQuestionId + 1 < questions.length}}" bindtap="next">Next</button>
+  <button wx:else bindtap="submitQuiz">Submit</button> 
+  <button wx:if="{{currentQuestionId > 0}}" bindtap="back">Back</button>
+
+  </view>
