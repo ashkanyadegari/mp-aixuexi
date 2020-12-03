@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": false,
     "postcss": true,
@@ -68,6 +68,18 @@
         {
           "name": "show",
           "pathName": "pages/show/show",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "quiz",
+          "pathName": "pages/quiz/quiz",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "sandbox",
+          "pathName": "pages/sandbox/sandbox",
           "scene": null
         }
       ]
