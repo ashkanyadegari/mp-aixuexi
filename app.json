@@ -5,7 +5,8 @@
     "pages/show/show",
     "pages/profile/profile",
     "pages/quiz/quiz",
-    "pages/sandbox/sandbox"
+    "pages/sandbox/sandbox",
+    "pages/result/result"
   ],
   "tabBar": {
     "list": [{

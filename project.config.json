@@ -80,6 +80,12 @@
         {
           "name": "sandbox",
           "pathName": "pages/sandbox/sandbox",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "result",
+          "pathName": "pages/result/result",
           "scene": null
         }
       ]
