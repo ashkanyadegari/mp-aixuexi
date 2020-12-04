@@ -7,7 +7,23 @@ Page({
    * Page initial data
    */
   data: {
+    loggedIn: false,
+  },
 
+  logIn: function() {
+    console.log(this.data)
+    this.setData({userInfo: getApp().globalData.userInfo})
+    this.setData({loggedIn: true})
+    this.setData({activeTab:0})
+  },
+
+
+  getUserInfo: function (e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo
+    })
   },
 
   goToShow: function() {

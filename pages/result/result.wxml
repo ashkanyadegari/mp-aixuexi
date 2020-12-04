@@ -1,14 +1,19 @@
 <!--pages/result/result.wxml-->
-<text>pages/result/result.wxml</text>
+<view class="background">
+  <view class="congrats">
+    <view class="h1">Quiz Results</view>
+    <view>Earned Points: 80</view>
+  </view>
 
-<view>Points: 80</view>
-
-<view wx:for="{{results}}">
-  <view>{{item.question}}</view>
-  <view>{{item.user_answer}}</view>
-  <view>{{item.correct}}</view>
-  <view wx:if="{{item.correct === false}}">Correct Answer: {{item.answer[0].answer}}</view>
-  <view>-------</view>
-
-
+  <view class="container">
+  <view wx:for="{{results}}" class="results">
+    <view class="result-card">
+      <view class="h2">{{item.question}}</view>
+      <view class="{{item.correct === true ? 'true_class' : 'false_class'}}">{{item.user_answer}}</view>
+      <view>{{item.correct ? 'Nice job!' : 'Unfortunately your answer was wrong HAHA, check the correct answer below'}}</view>
+      <view class="true_class" wx:if="{{item.correct === false}}">Correct Answer: {{item.answer[0].answer}}</view>
+    </view>
+  </view>
+  </view>
 </view>
+

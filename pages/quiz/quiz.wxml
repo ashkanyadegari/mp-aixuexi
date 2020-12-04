@@ -4,15 +4,16 @@
   <view class="question">
     <view class="Timer">Timer</view>
     <view class="question-details">
-      <view class="quiz-no">Q{{currentQuestionId + 1}}: </view>
-      <view class="quiz-question">{{questions[currentQuestionId].question}}</view>
+      <view class="quiz-question">Q{{currentQuestionId + 1}}:{{questions[currentQuestionId].question}}</view>
     </view>
     <view class="choices">
       <radio-group class="radio-group">
         <view wx:for="{{questions[currentQuestionId].choices}}" wx:for-item="choice">
-          <label data-choice-id="{{choice.id}}" data-question-id="{{choice.question_id}}"class="radio" bindtap="chooseAnswer">
-            <radio value="{{choice.answer}}" data-choice-id="{{choice.id}}" />{{choice.answer}}
-          </label>
+          <view class="quiz-option">
+            <label data-choice-id="{{choice.id}}" data-question-id="{{choice.question_id}}"class="radio" bindtap="chooseAnswer">
+              <radio value="{{choice.answer}}" data-choice-id="{{choice.id}}" />{{choice.answer}}
+            </label>
+          </view>
         </view>
       </radio-group>
     </view>
