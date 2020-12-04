@@ -1,0 +1,14 @@
+<!--pages/result/result.wxml-->
+<text>pages/result/result.wxml</text>
+
+<view>Points: 80</view>
+
+<view wx:for="{{results}}">
+  <view>{{item.question}}</view>
+  <view>{{item.user_answer}}</view>
+  <view>{{item.correct}}</view>
+  <view wx:if="{{item.correct === false}}">Correct Answer: {{item.answer[0].answer}}</view>
+  <view>-------</view>
+
+
+</view>

@@ -14,7 +14,7 @@ Page({
    */
   onLoad: function () {
     let page = this
-    let params = {course_id: 5 }
+    let params = {course_id: 8 }
     wx.request({
       url: 'http://localhost:3000/api/v1/questions/',
       method: 'GET',
@@ -57,7 +57,7 @@ Page({
     this.setData({
       currentQuestionId: this.data.currentQuestionId + 1,
     })
-    console.log(this.data.currentQuestionId)  
+    console.log(this.data.currentQuestionId)
   },
 
   back: function(){
@@ -77,9 +77,13 @@ Page({
       wx.request({
         url: 'http://localhost:3000/api/v1/useranswer',
         method: 'POST',
-        data: { answers: {answers: ans }},
+        data: { answer: ans },
         success(res){
           console.log(res)
+
+          wx.navigateTo({
+            url: `/pages/result/result?course=8`,
+          })
         }
       })
     }
