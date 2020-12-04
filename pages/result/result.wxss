@@ -1,1 +1,69 @@
 /* pages/result/result.wxss */
+
+.results {
+  display: flex;
+  justify-content: space-around;
+}
+
+.result-card {
+  height: 350rpx;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 20rpx;
+  margin-bottom: 15rpx;
+  position: relative;
+  margin-top: 5px;
+  width: 90vw;
+  padding: 20rpx;
+}
+
+.background {
+  background-color: #1B2A59;
+  height: 25vh;
+  border-radius: 0 0 20rpx 20rpx;
+  position: relative;
+}
+/* Font Sizes */
+.title{
+  height: 100rpx;
+  font-size: large;
+  color: white;
+  font-weight: bold;
+}
+
+.h1 {
+  font-size: 56rpx;
+  color: white;
+  font-weight: bolder;
+}
+
+.congrats {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  color: white;
+}
+
+.h2 {
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+
+/* Font Sizes */
+
+
+.false_class {
+  background-color: rgba(255, 0, 0, 0.24);
+  padding: 8px 8px;
+  border-radius: 5px;
+  color: red;
+  border: 1px solid red;
+}
+
+.true_class {
+  background-color: rgba(43, 255, 0, 0.24);
+  padding: 8px 8px;
+  border-radius: 5px;
+  color: green;
+  border: 1px solid green;
+}

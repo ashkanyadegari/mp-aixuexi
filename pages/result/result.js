@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
 
-    const params = {user_id: 1, course_id: options.course}
+    const params = {user_id: 1, course_id: 8}
     let page = this 
     wx.request({
       url: 'http://localhost:3000/api/v1/useranswer',
@@ -27,6 +27,12 @@ Page({
       }
     })
 
+  },
+
+  goToHome: function(){
+    wx.switchTab({
+      url: '/pages/index/index',
+    })
   },
 
   /**
