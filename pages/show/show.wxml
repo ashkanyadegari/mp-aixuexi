@@ -31,3 +31,5 @@
     <navigator bindtap="goToShow" class="btn" >See More</navigator>
   </view>
 </view>
+
+<navigator bindtap="goToQuiz" class="btn" data-id="{{id}}">Start Quiz</navigator>
