@@ -27,6 +27,15 @@ Page({
 
   },
 
+  goToQuiz: function(event) {
+    console.log(event)
+    const id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/quiz/quiz?id=${id}`,
+    })
+
+  },
+
   goToShow: function() {
     wx.switchTab({
       url: '/pages/index/index',

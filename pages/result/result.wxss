@@ -12,7 +12,7 @@
   border-radius: 20rpx;
   margin-bottom: 15rpx;
   position: relative;
-  margin-top: 5px;
+  margin-top: 10rpx;
   width: 90vw;
   padding: 20rpx;
 }
@@ -35,6 +35,10 @@
   font-size: 56rpx;
   color: white;
   font-weight: bolder;
+}
+
+.container {
+  height: 100vh;
 }
 
 .congrats {

@@ -12,11 +12,11 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function () {
+  onLoad: function (options) {
     let page = this
-    let params = {course_id: 8 }
+    let params = {course_id: options.id }
     wx.request({
-      url: 'http://localhost:3000/api/v1/questions/',
+      url: 'https://aixuexi.wogengapp.cn/api/v1/questions/',
       method: 'GET',
       data: params,
       success(res){
@@ -74,15 +74,17 @@ Page({
       console.log("Submitted")
       console.log(this.data.answers)
       const ans = this.data.answers
+      const course_id = this.options.id
+      console.log(course_id)
       wx.request({
-        url: 'http://localhost:3000/api/v1/useranswer',
+        url: 'https://aixuexi.wogengapp.cn/api/v1/useranswer',
         method: 'POST',
         data: { answer: ans },
         success(res){
           console.log(res)
 
           wx.navigateTo({
-            url: `/pages/result/result?course=8`,
+            url: `/pages/result/result?course=${course_id}`,
           })
         }
       })
