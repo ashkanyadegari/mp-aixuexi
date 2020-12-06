@@ -17,7 +17,7 @@ Page({
     let page = this
     
     wx.request({
-      url: `https://aixuexi.wogengapp.cn/api/v1/courses/${id}`,
+      url: getApp().globalData.host + `api/v1/courses/${id}`,
       success(res){
         console.log(res.data)
         const course = res.data

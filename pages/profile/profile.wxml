@@ -2,30 +2,29 @@
 <view class="background">
   <view class="h1">My Profile</view>
 
-  <button class='login-button' wx:if="{{!loggedIn}}" bindtap="logIn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Please log in</button>
-
   <view class="profile" wx:if="{{loggedIn}}">
   <view class="profile-card">
     <view class="profile-card-info">
-      <image class="profile-image" src="{{userInfo.avatarUrl}}"/>
+      <image class="profile-image" src="{{user.avatar}}"/>
       <view class="profile-content">
-        <view class="h2 nickname">{{userInfo.nickName}}</view>
+        <view class="h2 nickname">{{user.name}}</view>
        
         <view class="p">{{userInfo.province}}</view>
       </view>
     </view>
     <view class="progress">
       <view class="progress-box">
-          <progress percent="80" border-radius='5' stroke-width="9" activeColor="#FE564D"/>
+          <progress percent="{{user.user_points/1000*100}}" border-radius='5' stroke-width="9" activeColor="#FE564D"/>
       </view>
     </view>
     <view class="points">
-      <text class="mypoints">1730</text><text class="total-points">/10000</text>
+      <text class="mypoints">{{user.user_points}}</text><text class="total-points">/1000 points</text>
     </view>
   </view>
   </view>
 </view>
 
+<view wx:if="{{loggedIn}}">
 <view class="page-content">
   <view class="h3">Suggested Courses</view>
   <view class="course-card">
@@ -44,3 +43,5 @@
     </view>
   </view>
 </view>
+</view>
+<button class='login-button' wx:if="{{!loggedIn}}" bindtap="logIn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Please log in</button>

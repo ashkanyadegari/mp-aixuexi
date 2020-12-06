@@ -27,7 +27,7 @@ Page({
   onLoad: function () {
     let page = this
     wx.request({
-      url: 'https://aixuexi.wogengapp.cn/api/v1/courses',
+      url: getApp().globalData.host + 'api/v1/courses',
       success(res){
         console.log(res.data.courses)
         const courses = res.data.courses
