@@ -1,7 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    const host = 'https://aixuexi.wogengapp.cn/'
+    const host = this.globalData.host
     console.log('beginning login')
     wx.login({
       success: (res) => {
@@ -22,5 +22,9 @@ App({
       }
     })
   },
-  globalData: {}
+  globalData: {
+     host: 'http://localhost:3000/',
+  //  host : 'https://aixuexi.wogengapp.cn/',
+   // ## place holder for dooku server ##
+  }
 })

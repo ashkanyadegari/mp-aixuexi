@@ -16,7 +16,7 @@ Page({
     const params = {user_id: getApp().globalData.user.id, course_id: options.course}
     let page = this 
     wx.request({
-      url: 'https://aixuexi.wogengapp.cn/api/v1/useranswer',
+      url: getApp().globalData.host + '/api/v1/useranswer',
       data: params,
       method: 'GET',
       success(res){

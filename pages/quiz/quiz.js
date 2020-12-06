@@ -16,7 +16,7 @@ Page({
     let page = this
     let params = {course_id: options.id }
     wx.request({
-      url: 'https://aixuexi.wogengapp.cn/api/v1/questions/',
+      url: getApp().globalData.host + '/api/v1/questions/',
       method: 'GET',
       data: params,
       success(res){
@@ -77,7 +77,7 @@ Page({
       const course_id = this.options.id
       console.log(course_id)
       wx.request({
-        url: 'https://aixuexi.wogengapp.cn/api/v1/useranswer',
+        url: getApp().globalData.host + '/api/v1/useranswer',
         method: 'POST',
         data: { answer: ans },
         success(res){

@@ -18,13 +18,13 @@ Page({
   },
 
 
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo
-    })
-  },
+  // getUserInfo: function (e) {
+  //   console.log(e)
+  //   app.globalData.userInfo = e.detail.userInfo
+  //   this.setData({
+  //     userInfo: e.detail.userInfo
+  //   })
+  // },
 
   goToShow: function() {
     wx.navigateTo({
@@ -40,6 +40,23 @@ Page({
       userInfo: event.detail.userInfo
     })
     console.log(this.data.userInfo)
+    const params = {
+      avatar: this.data.userInfo.avatarUrl,
+      name: this.data.userInfo.nickName
+    }
+    let page = this
+    wx.request({
+      url: app.globalData.host + `api/v1/users/${app.globalData.user.id}`,
+      data: params,
+      method: 'PUT',
+      success(res){
+        console.log(res)
+        app.globalData.user = res.data.user
+        const user = app.globalData.user
+        page.setData({user})
+      }
+
+    })
   },
 
   /**
