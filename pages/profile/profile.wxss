@@ -6,6 +6,7 @@
   height: 25vh;
   border-radius: 0 0 20rpx 20rpx;
   position: relative;
+  margin-bottom: 100px;
 }
 
 .profile-image {
@@ -64,6 +65,12 @@
   width: 92%;
 }
 
+.round-progress {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 .progress {
   display: flex;
   justify-content: space-around;
@@ -98,56 +105,6 @@
 
 /* Course cards */
 
-.course-card {
-  background-color: white;
-  box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
-  border-radius: 10rpx;
-  padding: 25rpx;
-  height: 100px;
-  position: relative;
-  margin-bottom: 5px;
-  display: flex;
-}
-
-.course-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.course-info {
-  margin-left: 8px;
-  height: 100%;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.course-image {
-  width: 150rpx;
-  height: 100%;
-  border-radius: 10rpx;
-  flex-shrink: 0;
-}
-
-.h4 {
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-.btn {
-  background-color: #1B2A59;
-  color: white;
-  text-align: center;
-  width: 100px;
-  padding: 5px 10px;
-  border-radius: 10rpx;
-  /* position: absolute;
-  right: 15px;
-  bottom: 15px; */
-  font-size: 0.9rem;
-
-}
 
 .wux-circle {
   display: inline-block;
@@ -176,4 +133,63 @@
 
 .round-progress {
   flex-shrink: 0;
+}
+
+.course-card {
+  background-color: white;
+  box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
+  border-radius: 10rpx;
+  padding: 25rpx;
+  height: 100px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.course-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-info {
+  margin-left: 8px;
+}
+
+.course-image {
+  min-width: 150rpx;
+  max-height: 150rpx;
+  max-width: 150rpx;
+  min-height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.h4 {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.btn {
+  background-color: #1B2A59;
+  color: white;
+  text-align: center;
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 10rpx;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 0.9rem;
+
+}
+
+.page-content {
+  margin-top: 25px;
+  padding: 0 15px;
+}
+
+.descr {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 250px;
+  margin-top: 10rpx;
 }

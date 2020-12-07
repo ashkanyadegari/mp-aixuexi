@@ -26,22 +26,24 @@
 
 <view wx:if="{{loggedIn}}">
 <view class="page-content">
-  <view class="h3">Suggested Courses</view>
-  <view class="course-card">
-    <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/photo-1491349174775-aaafddd81942.jpeg"/>
-    <view class="course-content">
-      <view class="course-info">
-        <view>
-          <view class="h4">Sustainibility in Bars</view>
-          <text class="p">Sustainibility in Bars: Run in bars</text>
+  <view class="h3">Your Courses</view>
+  <view class="cards" wx:for="{{courses}}" wx:for-item="course">
+  <view class="course-card" data-id="{{course.id}}">
+      <view class="course-content">
+        <image class="course-image" src="{{course.photo}}"/>
+        <view class="course-info">
+          <view class="h4">{{course.data.name}}</view>
+          <view class="p descr">{{course.data.description}}</view>
         </view>
-        <!-- <navigator bindtap="goToShow" class="btn" url="#" >See More</navigator> -->
+
       </view>
+      <navigator data-id="{{course.data.id}}" bindtap="goToShow" class="btn" >Start</navigator>
       <view class="round-progress">
-        <wux-circle percent="30" color="#F2C1BD" size="30" strokeWidth="4"></wux-circle>
+        <wux-circle percent="{{course.is_completed === false ? 30 : 100}}" color="#F2C1BD" size="30" strokeWidth="4"></wux-circle>
       </view>
     </view>
   </view>
 </view>
 </view>
 <button class='login-button' wx:if="{{!loggedIn}}" bindtap="logIn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Please log in</button>
+
