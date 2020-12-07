@@ -71,3 +71,21 @@
   color: green;
   border: 1px solid green;
 }
+
+.course-button {
+  background-color: #1B2A59;
+  color: white;
+}
+
+.home-button {
+  background-color: #F2C1BD;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  margin-left: 20px;
+  bottom: 20px;
+}
