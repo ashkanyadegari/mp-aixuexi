@@ -35,6 +35,7 @@
 
 .background {
   background-color: #1B2A59;
+  /* background: url(/img/bg-blue.svg); */
   height: 25vh;
   border-radius: 0 0 20rpx 20rpx;
   position: relative;

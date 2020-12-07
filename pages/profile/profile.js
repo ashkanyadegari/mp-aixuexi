@@ -66,20 +66,20 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    const user_id = app.globalData.user.id
-    const params = {
-      user_id: user_id
-    }
-    wx.request({
-      url: app.globalData.host + 'api/v1/getusercourses',
-      data: params,
-      method: 'GET',
-      success: (res) => {
-        console.log(res.data)
-        const courses = res.data
-        this.setData(courses)
-      }
-    })
+    // const user_id = app.globalData.user.id
+    // const params = {
+    //   user_id: user_id
+    // }
+    // wx.request({
+    //   url: app.globalData.host + 'api/v1/getusercourses',
+    //   data: params,
+    //   method: 'GET',
+    //   success: (res) => {
+    //     console.log(res.data)
+    //     const courses = res.data
+    //     this.setData(courses)
+    //   }
+    // })
 
   },
 
@@ -110,6 +110,21 @@ Page({
         this.setData({user})
       }
 
+    })
+
+    const user_id = app.globalData.user.id
+    const param = {
+      user_id: user_id
+    }
+    wx.request({
+      url: app.globalData.host + 'api/v1/getusercourses',
+      data: param,
+      method: 'GET',
+      success: (res) => {
+        console.log(res.data)
+        const courses = res.data
+        this.setData(courses)
+      }
     })
 
   },
