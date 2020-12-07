@@ -16,4 +16,7 @@
   </view>
   </view>
 </view>
+<button bindtap="goToCourse" data-id="{{course_id}}">Go To Course</button>
+<button bindtap="goToHome" data-id="{{course_id}}">Go To Home</button>
+
 

@@ -40,6 +40,9 @@ Page({
       userInfo: event.detail.userInfo
     })
     console.log(this.data.userInfo)
+    wx.switchTab({
+      url: '/pages/profile/profile',
+    })
     const params = {
       avatar: this.data.userInfo.avatarUrl,
       name: this.data.userInfo.nickName
@@ -49,11 +52,11 @@ Page({
       url: app.globalData.host + `api/v1/users/${app.globalData.user.id}`,
       data: params,
       method: 'PUT',
-      success(res){
+      success: (res) =>{
         console.log(res)
         app.globalData.user = res.data.user
         const user = app.globalData.user
-        page.setData({user})
+        this.setData({user})
       }
 
     })
@@ -63,6 +66,20 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const user_id = app.globalData.user.id
+    const params = {
+      user_id: user_id
+    }
+    wx.request({
+      url: app.globalData.host + 'api/v1/getusercourses',
+      data: params,
+      method: 'GET',
+      success: (res) => {
+        console.log(res.data)
+        const courses = res.data
+        this.setData(courses)
+      }
+    })
 
   },
 
@@ -77,7 +94,32 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
+    const params = {
+      avatar: getApp().globalData.user.avatar,
+      name: getApp().globalData.user.name
+    }
+    let page = this
+    wx.request({
+      url: app.globalData.host + `api/v1/users/${app.globalData.user.id}`,
+      data: params,
+      method: 'PUT',
+      success: (res) =>{
+        console.log(res)
+        app.globalData.user = res.data.user
+        const user = app.globalData.user
+        this.setData({user})
+      }
 
+    })
+
+  },
+
+  goToShow: function(event) {
+    const id = event.currentTarget.dataset.id
+    console.log(event)
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`,
+    })
   },
 
   /**

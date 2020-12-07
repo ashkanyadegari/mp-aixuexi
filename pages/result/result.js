@@ -14,6 +14,7 @@ Page({
   onLoad: function (options) {
 
     const params = {user_id: getApp().globalData.user.id, course_id: options.course}
+    this.setData({course_id: options.course})
     let page = this 
     wx.request({
       url: getApp().globalData.host + '/api/v1/useranswer',
@@ -27,6 +28,14 @@ Page({
       }
     })
 
+  },
+
+  goToCourse: function(event){
+    console.log(event)
+    const id = event.currentTarget.dataset.id
+    wx.reLaunch({
+      url: `/pages/show/show?id=${id}`,
+    })
   },
 
   goToHome: function(){

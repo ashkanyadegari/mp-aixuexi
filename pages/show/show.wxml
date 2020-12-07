@@ -1,11 +1,11 @@
 <!--pages/show/show.wxml-->
 <view class="background">
   <view class="h1">Course {{id}}: {{name}}</view>
-  <view class="video" wx:if="{{wechat != false}}">
+  <view wx:if="{{wechat===false}}" class="video-card" style="background: url({{photos[0]}})">
+  </view>
+  <view class="video" wx:else>
       <!-- <image class="play-button" src="/img/play.svg"/> -->
       <video class="my-video" src="{{files}}" style="width:100% height:100px"></video>
-  </view>
-  <view wx:else class="video-card" style="background: url({{photos[0]}})">
   </view>
 </view>
 
