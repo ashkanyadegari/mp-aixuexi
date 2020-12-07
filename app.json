@@ -6,19 +6,34 @@
     "pages/profile/profile",
     "pages/quiz/quiz",
     "pages/sandbox/sandbox",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/statistics/statistics",
+    "pages/library/library"
   ],
   "tabBar": {
     "list": [{
       "pagePath": "pages/index/index",
       "text": "Home",
-      "selectedIconPath": "/img/home.png",
-      "iconPath": "/img/home.png"
-    }, {
+      "selectedIconPath": "/img/flash-4.png",
+      "iconPath": "/img/flash-3.png"
+    },
+    {
+      "pagePath": "pages/library/library",
+      "text": "Library",
+      "selectedIconPath": "/img/library-2.png",
+      "iconPath": "/img/library-1.png"
+    },
+    {
+      "pagePath": "pages/statistics/statistics",
+      "text": "Statistics",
+      "selectedIconPath": "/img/graph-1.png",
+      "iconPath": "/img/graph-2.png"
+    },
+     {
       "pagePath": "pages/profile/profile",
       "text": "Profile",
-      "selectedIconPath": "/img/Profile.png",
-      "iconPath": "/img/Profile.png"
+      "selectedIconPath": "/img/edit-profile-2.png",
+      "iconPath": "/img/edit-profile.png"
     }]
   },
   "window":{

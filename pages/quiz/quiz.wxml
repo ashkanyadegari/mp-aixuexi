@@ -11,7 +11,7 @@
         <view wx:for="{{questions[currentQuestionId].choices}}" wx:for-item="choice">
 
             <label data-choice-id="{{choice.id}}" data-question-id="{{choice.question_id}}"class="radio" bindtap="chooseAnswer">
-              <view class="quiz-option">
+              <view class="quiz-option {{answers[currentQuestionId].choice_id === choice.id ? 'quiz-bg' : ''}}">
               <radio value="{{choice.answer}}" data-choice-id="{{choice.id}}" />{{choice.answer}}
             </view>
             </label>

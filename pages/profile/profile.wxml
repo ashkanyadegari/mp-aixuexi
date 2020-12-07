@@ -2,7 +2,7 @@
 <view class="background">
   <view class="h1">My Profile</view>
 
-  <view class="profile" wx:if="{{loggedIn}}">
+  <view class="profile" wx:if="{{user.name != null}}">
   <view class="profile-card">
     <view class="profile-card-info">
       <image class="profile-image" src="{{user.avatar}}"/>
@@ -24,7 +24,7 @@
   </view>
 </view>
 
-<view wx:if="{{loggedIn}}">
+<view wx:if="{{user.name != null}}">
 <view class="page-content">
   <view class="h3">Your Courses</view>
   <view class="cards" wx:for="{{courses}}" wx:for-item="course">
@@ -37,7 +37,7 @@
         </view>
 
       </view>
-      <navigator data-id="{{course.data.id}}" bindtap="goToShow" class="btn" >Start</navigator>
+      <navigator data-id="{{course.data.id}}" bindtap="goToShow" class="btn" >Continue</navigator>
       <view class="round-progress">
         <wux-circle percent="{{course.is_completed === false ? 30 : 100}}" color="#F2C1BD" size="30" strokeWidth="4"></wux-circle>
       </view>
@@ -45,5 +45,5 @@
   </view>
 </view>
 </view>
-<button class='login-button' wx:if="{{!loggedIn}}" bindtap="logIn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Please log in</button>
+<button class='login-button' wx:if="{{user.name === null}}" bindtap="logIn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Please log in</button>
 

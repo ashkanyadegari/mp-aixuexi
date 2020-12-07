@@ -34,7 +34,18 @@
   padding: 50rpx 20rpx;
 }
 
-.quiz-option:hover {
+/* .quiz-option:hover {
+  border: 1px solid black;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+  padding: 50rpx 20rpx;
+  background-color: #1B2A59;
+  color: white;
+  transition:background-color 0.25s ease;
+
+} */
+
+.quiz-bg {
   border: 1px solid black;
   border-radius: 10rpx;
   margin-bottom: 10rpx;
