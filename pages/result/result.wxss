@@ -11,7 +11,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 20rpx;
   margin-bottom: 15rpx;
-  position: relative;
+  /* position: relative; */
   margin-top: 10rpx;
   width: 90vw;
   padding: 20rpx;
