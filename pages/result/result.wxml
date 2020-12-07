@@ -16,7 +16,10 @@
   </view>
   </view>
 </view>
-<button bindtap="goToCourse" data-id="{{course_id}}">Go To Course</button>
-<button bindtap="goToHome" data-id="{{course_id}}">Go To Home</button>
+<view class="buttons">
+  <button class="course-button" bindtap="goToCourse" data-id="{{course_id}}">Go To Course</button>
+  <button class="home-button" bindtap="goToHome" data-id="{{course_id}}">Go To Home</button>
+</view>
+
 
 
