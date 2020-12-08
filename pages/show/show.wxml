@@ -1,7 +1,7 @@
 <!--pages/show/show.wxml-->
 <view class="background">
   <view class="h1">Course {{id}}: {{name}}</view>
-  <view wx:if="{{wechat===false}}" class="video-card" style="background: url({{photos[0]}})">
+  <view wx:if="{{!wechat}}" class="video-card" style="background: url({{photos[0]}})">
   </view>
   <view class="video" wx:else>
       <!-- <image class="play-button" src="/img/play.svg"/> -->
@@ -15,7 +15,7 @@
     <view class="p">{{description}}</view>
   </view>
 
-  <view class="h3">Related Course</view>
+  <!-- <view class="h3">Related Course</view>
   <view class="course-card">
     <view class="course-content">
       <image class="course-image" src="https://lewagon.oss-cn-beijing.aliyuncs.com/qptxrc2mbny2bi62gu41xw1i0b5q"/>
@@ -28,7 +28,7 @@
       </view>
     </view>
     <navigator bindtap="goToShow" class="btn" >See More</navigator>
-  </view>
+  </view> -->
 </view>
 
 <navigator bindtap="goToQuiz" class="btn" data-id="{{id}}">Start Quiz</navigator>

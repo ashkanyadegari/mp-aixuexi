@@ -5,6 +5,7 @@ Page({
    * Page initial data
    */
   data: {
+    wechat: false,
     video: "https://lewagon.oss-cn-beijing.aliyuncs.com/videoplayback.mp4"
   },
 
@@ -13,7 +14,12 @@ Page({
    */
   onLoad: function (options) {
     console.log(options.id)
-    const id = options.id
+    let id = 37
+    if (options.id == undefined) {
+      id = 37
+    } else {
+      id = options.id
+    }
     let page = this
     
     wx.request({

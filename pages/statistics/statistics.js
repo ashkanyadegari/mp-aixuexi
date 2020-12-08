@@ -12,7 +12,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    
   },
 
   formSubmit: function(event) {
@@ -33,7 +33,10 @@ Page({
         const compId = res.data.company.id
         getApp().globalData.user.company_id = compId
       }
+    })
 
+    wx.reLaunch({
+      url: '/pages/statistics/statistics',
     })
   },
 
@@ -48,6 +51,21 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
+    let page = this
+    let user = getApp().globalData.user.id
+    const params = {
+      user_id: user
+    }
+    wx.request({
+      url: getApp().globalData.host + '/api/v1/userstats',
+      data: params,
+      method: 'GET',
+      success(res){
+        console.log(res)
+        const stats = res.data.data
+        page.setData(stats)
+      }
+    })
 
     if (getApp().globalData.user.company_id !== null){
       let page = this
@@ -63,10 +81,13 @@ Page({
           console.log(res)
           const users = res.data.users
           page.setData({users})
+          wx.setStorageSync('company_id', users[0].company_id)
         }
       })
     }
-
+    this.setData({
+      company_id: wx.getStorageSync('company_id') 
+    })
   },
 
   /**
