@@ -37,7 +37,6 @@
     </view>
   </view>
 </view>
-
 <view class="page-content">
 <view class="h3">Explore More</view>
 <view class="cards" wx:for="{{courses}}" wx:for-item="course">

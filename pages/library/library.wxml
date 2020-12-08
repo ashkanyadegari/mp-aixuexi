@@ -1,2 +1,22 @@
 <!--pages/library/library.wxml-->
-<text>pages/library/library.wxml</text>
+<view class="banner">
+  <input class="search" type="text" placeholder="Search Your Course Here" value="{{inputval}}"
+  bindinput="inputtyping" bindconfirm="search"/>
+</view>
+
+<view class="page-content">
+<view class="h3">Courses</view>
+<view class="cards" wx:for="{{courses}}" wx:for-item="course">
+<view class="course-card" data-id="{{course.id}}">
+    <view class="course-content">
+      <image class="course-image" src="{{course.photos[0]}}"/>
+      <view class="course-info">
+        <view class="h4">{{course.name}}</view>
+        <view class="p descr">{{course.description}}</view>
+      </view>
+    </view>
+    <navigator data-id="{{course.id}}" bindtap="goToShow" class="btn" >Start</navigator>
+  </view>
+</view>
+</view>
+  
