@@ -11,7 +11,10 @@
             Courses
           </view>
           <view>
-            0/100
+            <view class="round-progress">
+              <wux-circle percent="{{mycourses/totalcourses*100}}" color="#F2C1BD" size="50" strokeWidth="4"></wux-circle>
+            </view>
+            {{mycourses}}/{{totalcourses}}
           </view>
           <view>
             completed
@@ -19,22 +22,24 @@
         </view>
         <view class="my-learning">
           <view>
-            Quizes
+            Questions
           </view>
           <view>
-            0/100
+            <view class="round-progress">
+              <wux-circle percent="{{myquizzes/totalquestions*100}}" color="#F2C1BD" size="50" strokeWidth="4"></wux-circle>
+            </view>
+            {{myquizzes}}/{{totalquestions}}
           </view>
           <view>
-            completed
+            answered
           </view>
         </view>
       </view>
     </view>
   </view>
 </view>
-
-<view class="company-stats" wx:if="{{getApp().globalData.user.company_id !== null}}">
-  <view class="h2">My Company Stats</view>
+<view class="company-stats" wx:if="{{company_id != null}}">
+  <view class="company-title">My Company Stats</view>
   <view class="colleagues" wx:for="{{users}}" wx:for-item="user">
     <view class="colleague">
       <view class="colleague-content">
@@ -42,11 +47,11 @@
         <image class="avatar"src="{{user.avatar}}"/>
       </view>
       <view class="name-points">
-        <view class="name">
+        <view class="name h2">
           {{user.name}}
         </view>
         <view class="points">
-          {{user.user_points}}
+          {{user.user_points}} points
         </view>
       </view>
       </view>
@@ -54,7 +59,7 @@
   </view>
 </view>
 
-<view class="login" wx:if="{{getApp().globalData.user.company_id === null}}">
+<view class="login" wx:if="{{company_id == null}}">
   <view class="h2">Add Company</view>
   <view class="p">Add your invitation code if you belong to a company</view>
   <view class="form">

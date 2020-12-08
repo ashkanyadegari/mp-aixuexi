@@ -25,6 +25,26 @@ Page({
       }
     })
   },
+
+  goToShow: function(event) {
+    const id = event.currentTarget.dataset.id
+    console.log(event)
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`,
+    })
+    const params = {
+      user_id: getApp().globalData.user.id,
+      course_id: id
+    }
+    wx.request({
+      url: app.globalData.host + 'api/v1/joincourse',
+      method: 'POST',
+      data: params,
+      success(res){
+        console.log(res)
+      }
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

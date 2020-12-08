@@ -10,6 +10,36 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   
+  getUserInfo: function (event) {
+    console.log(event)
+    app.globalData.userInfo = event.detail.userInfo
+    console.log(app.globalData.userInfo)
+    this.setData({
+      userInfo: event.detail.userInfo
+    })
+    console.log(this.data.userInfo)
+    wx.switchTab({
+      url: '/pages/profile/profile',
+    })
+    const params = {
+      avatar: this.data.userInfo.avatarUrl,
+      name: this.data.userInfo.nickName
+    }
+    let page = this
+    wx.request({
+      url: app.globalData.host + `api/v1/users/${app.globalData.user.id}`,
+      data: params,
+      method: 'PUT',
+      success: (res) =>{
+        console.log(res)
+        app.globalData.user = res.data.user
+        const user = app.globalData.user
+        this.setData({user})
+      }
+
+    })
+  },
+  
   goToShow: function(event) {
     const id = event.currentTarget.dataset.id
     console.log(event)
