@@ -9,7 +9,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-
+  
   goToShow: function(event) {
     const id = event.currentTarget.dataset.id
     console.log(event)

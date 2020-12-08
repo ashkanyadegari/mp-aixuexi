@@ -92,8 +92,15 @@
           "scene": null
         },
         {
+          "name": "pages/library/library",
+          "pathName": "pages/library/library",
+          "query": "",
+          "scene": null
+        },
+        {
           "name": "statistics",
           "pathName": "pages/statistics/statistics",
+          "query": "",
           "scene": null
         }
       ]
