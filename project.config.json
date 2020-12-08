@@ -88,6 +88,12 @@
         {
           "name": "result",
           "pathName": "pages/result/result",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "statistics",
+          "pathName": "pages/statistics/statistics",
           "scene": null
         }
       ]

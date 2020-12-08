@@ -1,1 +1,130 @@
-/* pages/statistics/statistics.wxss */
+/* Fonts */
+.h1 {
+  font-size: 56rpx;
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+
+.h2 {
+  font-size: 32rpx;
+  font-weight: bolder;
+}
+
+.h4 {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.p {
+  font-size: 0.8rem;
+}
+
+.h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* End of Fonts */
+
+.background {
+  background-color: #1B2A59;
+  /* background: url(/img/bg-blue.svg); */
+  height: 25vh;
+  border-radius: 0 0 20rpx 20rpx;
+  position: relative;
+}
+
+/* My Stats Card */
+
+.personal-stats-card {
+  background-color: white;
+  position: absolute;
+  min-width: 90vw;
+  /* margin: 14px; */
+  height: 250rpx;
+  bottom: -60px;
+  box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
+  padding: 15px 5px;
+  border-radius: 15rpx;
+}
+.profile-card-info {
+  display: flex;
+}
+.personal-stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mystats {
+  display:flex;
+  justify-content: space-around;
+}
+/* End of my stats */
+
+/* company_stats */
+
+.company-stats {
+  margin-top: 150rpx;
+}
+
+.colleagues {
+  display: flex;
+  justify-content: space-around;
+}
+
+.colleague {
+  background-color: white;
+  min-width: 90vw;
+  margin-top: 20rpx;
+  height: 120rpx;
+  box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
+  padding: 15px 5px;
+  border-radius: 15rpx;
+}
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.colleague-content {
+  display: flex;
+  /* justify-content: flex-start; */
+}
+
+.name-points {
+  display: flex;
+  align-items: space-between;
+}
+
+/*  */
+
+/* Submit Company */
+
+.login {
+  margin-top: 250rpx;
+}
+
+.input {
+  width: 90vw;
+  background-color: white;
+  padding: 20rpx 10rpx;
+  box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
+  border-radius: 15rpx;
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+button {
+  margin-top: 15rpx;
+}
+
+/* End of Submit Company */
