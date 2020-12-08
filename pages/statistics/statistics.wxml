@@ -1,2 +1,66 @@
 <!--pages/statistics/statistics.wxml-->
-<text>pages/statistics/statistics.wxml</text>
+<view class="background">
+  <view class="h1">Statistics</view>
+
+  <view class="personal-stats">
+    <view class="personal-stats-card">
+      <view class="h2">My Stats</view>
+      <view class="mystats">
+        <view class="my-learning">
+          <view>
+            Courses
+          </view>
+          <view>
+            0/100
+          </view>
+          <view>
+            completed
+          </view>
+        </view>
+        <view class="my-learning">
+          <view>
+            Quizes
+          </view>
+          <view>
+            0/100
+          </view>
+          <view>
+            completed
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="company-stats" wx:if="{{getApp().globalData.user.company_id !== null}}">
+  <view class="h2">My Company Stats</view>
+  <view class="colleagues" wx:for="{{users}}" wx:for-item="user">
+    <view class="colleague">
+      <view class="colleague-content">
+      <view class="image">
+        <image class="avatar"src="{{user.avatar}}"/>
+      </view>
+      <view class="name-points">
+        <view class="name">
+          {{user.name}}
+        </view>
+        <view class="points">
+          {{user.user_points}}
+        </view>
+      </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="login" wx:if="{{getApp().globalData.user.company_id === null}}">
+  <view class="h2">Add Company</view>
+  <view class="p">Add your invitation code if you belong to a company</view>
+  <view class="form">
+  <form bindsubmit="formSubmit">
+    <input class="input" name="company" placeholder="13w4g0n" />
+    <button class="btn-flat" form-type="submit">Submit</button>
+  </form>
+  </view>
+</view>

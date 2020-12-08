@@ -15,6 +15,28 @@ Page({
 
   },
 
+  formSubmit: function(event) {
+    console.log(event.detail.value.company)
+    const q = event.detail.value.company
+    const user = getApp().globalData.user.id
+    const params = {
+      code: q,
+      user: user
+    }
+
+    wx.request({
+      url: getApp().globalData.host + 'api/v1/getcompany',
+      data: params,
+      method: 'GET',
+      success(res){
+        console.log(res)
+        const compId = res.data.company.id
+        getApp().globalData.user.company_id = compId
+      }
+
+    })
+  },
+
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -26,6 +48,24 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
+
+    if (getApp().globalData.user.company_id !== null){
+      let page = this
+      const id = getApp().globalData.user.company_id
+      const params = {
+        company_id: id
+      }
+      wx.request({
+        url: getApp().globalData.host + 'api/v1/getcolleagues',
+        data: params,
+        method: 'GET',
+        success(res) {
+          console.log(res)
+          const users = res.data.users
+          page.setData({users})
+        }
+      })
+    }
 
   },
 
