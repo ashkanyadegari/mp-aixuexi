@@ -13,6 +13,7 @@
   ],
   "tabBar": {
     "color": "red",
+    "selectedColor": "#F2C1BD",
     "list": [{
       "pagePath": "pages/index/index",
       "text": "Home",
