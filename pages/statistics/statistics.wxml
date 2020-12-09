@@ -60,8 +60,10 @@
 </view>
 
 <view class="login" wx:if="{{company_id == null}}">
-  <view class="h2">Add Company</view>
-  <view class="p">Add your invitation code if you belong to a company</view>
+  <view class="add-company">
+    <view class="h2">Add Company</view>
+    <view class="p">Add your invitation code if you belong to a company</view>
+  </view>
   <view class="form">
   <form bindsubmit="formSubmit">
     <input class="input" name="company" placeholder="13w4g0n" />

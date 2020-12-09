@@ -17,12 +17,13 @@ Page({
     this.setData({course_id: options.course})
     let page = this 
     wx.request({
-      url: getApp().globalData.host + '/api/v1/useranswer',
+      url: getApp().globalData.host + 'api/v1/useranswer',
       data: params,
       method: 'GET',
       success(res){
         console.log(res)
         const results = res.data
+        console.log(results)
         page.setData(results)
 
       }

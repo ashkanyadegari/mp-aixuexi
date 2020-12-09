@@ -9,7 +9,9 @@
         <image class='hero-image' src="{{courses[3].photos[0]}}" />
         <view class="course-text">
           <view class="h2">{{courses[3].name}}</view>
+          <view class="herodiv">
           <text class="nodesc"> {{courses[3].description}}</text>
+        </view>
         </view>
       </view>
       <view class="progress">

@@ -5,8 +5,8 @@ Page({
    * Page initial data
    */
   data: {
-    wechat: false,
-    video: "https://lewagon.oss-cn-beijing.aliyuncs.com/videoplayback.mp4"
+    wechat: false
+    // video: "https://lewagon.oss-cn-beijing.aliyuncs.com/videoplayback.mp4"
   },
 
   /**

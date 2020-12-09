@@ -4,8 +4,7 @@
   <view wx:if="{{!wechat}}" class="video-card" style="background: url({{photos[0]}})">
   </view>
   <view class="video" wx:else>
-      <!-- <image class="play-button" src="/img/play.svg"/> -->
-      <video class="my-video" src="{{files}}" style="width:100% height:100px"></video>
+      <video class="my-video" src="{{video}}" style="width:100% height:100px"/>
   </view>
 </view>
 
@@ -31,4 +30,4 @@
   </view> -->
 </view>
 
-<navigator bindtap="goToQuiz" class="btn" data-id="{{id}}">Start Quiz</navigator>
+<navigator bindtap="goToQuiz" class="btn" data-id="{{id}}" url="#">Start Quiz</navigator>

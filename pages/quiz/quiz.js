@@ -16,7 +16,7 @@ Page({
     let page = this
     let params = {course_id: options.id }
     wx.request({
-      url: getApp().globalData.host + '/api/v1/questions/',
+      url: getApp().globalData.host + 'api/v1/questions/',
       method: 'GET',
       data: params,
       success(res){
@@ -28,23 +28,32 @@ Page({
     })
   },
 
+  checkAnswer: function () {
+
+  },
+
   chooseAnswer: function(event){
     const choiceId = event.currentTarget.dataset.choiceId
     const questionId = event.currentTarget.dataset.questionId
     const userId = getApp().globalData.user.id
     const currentAnswers = this.data.answers
     const answer = {"user_id": userId, "question_id": questionId, "choice_id": choiceId}
-      function search(nameKey, myArray){
-        for (var i=0; i < myArray.length; i++) {
+    
+    function search(nameKey, myArray){
+        for (let i=0; i < myArray.length; i++) {
             if (myArray[i].question_id === nameKey) {
                 return true;
             }
         }
     }
     if (search(questionId, currentAnswers)) {
-      const myanswer = currentAnswers.find((element) => element.question_id === questionId)
+      let myanswer = currentAnswers.find((element) => element.question_id === questionId)
       myanswer.choice_id = choiceId
       console.log(this.data.answers)
+      this.data.answers[this.data.currentQuestionId] = myanswer
+      this.setData({
+        answers: this.data.answers
+      })
     } else {
     this.setData({
       answers: [...currentAnswers, answer]
@@ -71,13 +80,11 @@ Page({
     if (this.data.answers.length < this.data.questions.length ) {
       console.log("You havent filled in all the answers")
     } else {
-      console.log("Submitted")
-      console.log(this.data.answers)
       const ans = this.data.answers
       const course_id = this.options.id
       console.log(course_id)
       wx.request({
-        url: getApp().globalData.host + '/api/v1/useranswer',
+        url: getApp().globalData.host + 'api/v1/useranswer',
         method: 'POST',
         data: { answer: ans },
         success(res){

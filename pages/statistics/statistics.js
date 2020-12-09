@@ -32,11 +32,11 @@ Page({
         console.log(res)
         const compId = res.data.company.id
         getApp().globalData.user.company_id = compId
-      }
-    })
 
-    wx.reLaunch({
-      url: '/pages/statistics/statistics',
+        wx.reLaunch({
+          url: '/pages/statistics/statistics',
+        })
+      }
     })
   },
 
