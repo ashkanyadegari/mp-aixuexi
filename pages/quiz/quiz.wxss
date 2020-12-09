@@ -1,7 +1,7 @@
 /* pages/quiz/quiz.wxss */
 
 .background {
-  background-color: #1B2A59;
+  background:linear-gradient(to right, #F2C1BD, #1B2A59);
   height: 25vh;
   border-radius: 0 0 20rpx 20rpx;
   position: relative;

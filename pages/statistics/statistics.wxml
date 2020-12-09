@@ -1,5 +1,6 @@
 <!--pages/statistics/statistics.wxml-->
 <view class="background">
+  <view class="triangle"><image src="/img/triangle.svg"/></view>
   <view class="h1">Statistics</view>
 
   <view class="personal-stats">

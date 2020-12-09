@@ -143,7 +143,9 @@
   margin-top: 20rpx;
 }
 button {
-  margin-top: 15rpx;
+  margin-top: 20rpx;
+  background:linear-gradient(to right, #F2C1BD, #1B2A59);
+  color: white;
 }
 
 /* End of Submit Company */
