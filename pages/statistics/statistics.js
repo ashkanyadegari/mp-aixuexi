@@ -7,7 +7,12 @@ Page({
   },
 
   onShow: function (options) {
+    this.setPageData()
     event.on("hasUserId", this, this.setPageData)
+  },
+
+  onHide: function(){
+    console.log("im on hide")
   },
 
   formSubmit: function(event) {
@@ -35,9 +40,9 @@ Page({
   },
 
   setPageData: function () {
+    console.log("im in setPageData!!")
     let page = this
     let user = getApp().globalData.user.id
-    console.log("checking setpagedata", user)
     const params = {
       user_id: user
     }

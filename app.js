@@ -5,6 +5,9 @@ App({
   onLaunch: function () {
     const host = this.globalData.host
     console.log('beginning login')
+    wx.showLoading({
+      
+    })
     wx.login({
       success: (res) => {
         console.log(res)
@@ -17,8 +20,11 @@ App({
         },
       // insert next code here
       success: (res) => {
-        console.log(res)
+        console.log("i have user id!", res)
         this.globalData.user = res.data.user
+        wx.hideLoading({
+          success: (res) => {},
+        })
         wx.setStorageSync('company_id', this.globalData.user.company_id)
         event.emit("hasUserId")
       }
@@ -26,6 +32,7 @@ App({
       }
     })
   },
+  
   globalData: {
      host: 'http://localhost:3000/',
   //  host : 'https://aixuexi.wogengapp.cn/',
