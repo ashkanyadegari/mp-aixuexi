@@ -1,0 +1,28 @@
+<view class="background">
+  <view class="h1">Course {{id}}: {{name}}</view>
+  <view class="video-card" style="background: url({{photos[0]}})">
+  </view>
+</view>
+
+<view class="page-content">
+  <view class="course-description">
+    <view class="h3">{{name}}</view>
+    <view class="p">{{description}}</view>
+  </view>
+</view>
+
+<view class="page-content-courses">
+  <view class="h3">Courses</view>
+  <view class="cards" wx:for="{{courses}}" wx:for-item="course">
+  <view class="course-card" data-id="{{course.id}}">
+      <view class="course-content">
+        <image class="course-image" src="{{course.photos[0]}}"/>
+        <view class="course-info">
+          <view class="h4">{{course.name}}</view>
+          <view class="p descr">{{course.description}}</view>
+        </view>
+      </view>
+      <navigator data-id="{{course.id}}" bindtap="goToShow" class="btn" >Start</navigator>
+    </view>
+  </view>
+</view>

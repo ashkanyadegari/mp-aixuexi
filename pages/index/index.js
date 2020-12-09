@@ -39,6 +39,15 @@ Page({
 
     })
   },
+
+  goToChapter: function(event){
+    const id = event.currentTarget.dataset.id
+    console.log(event)
+    wx.navigateTo({
+      url: `/pages/chapter/chapter?id=${id}`,
+    })
+
+  },
   
   goToShow: function(event) {
     const id = event.currentTarget.dataset.id
@@ -74,6 +83,17 @@ Page({
         console.log(res.data.courses)
         const courses = res.data.courses
         page.setData({courses})
+      }
+    })
+
+    wx.request({
+      url: app.globalData.host + 'api/v1/chapters',
+      method: 'GET',
+      success(res){
+        console.log(res)
+        const chapters = res.data.chapters
+        console.log(chapters)
+        page.setData({chapters})
       }
     })
   },

@@ -1,21 +1,17 @@
 // pages/statistics/statistics.js
-Page({
+import event from '../../utils/event'
 
-  /**
-   * Page initial data
-   */
+Page({
   data: {
 
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
-    
+    event.on("hasUserId", this, this.setPageData)
   },
 
   formSubmit: function(event) {
+    let page = this
     console.log(event.detail.value.company)
     const q = event.detail.value.company
     const user = getApp().globalData.user.id
@@ -28,31 +24,20 @@ Page({
       url: getApp().globalData.host + 'api/v1/getcompany',
       data: params,
       method: 'GET',
-      success(res){
+      success: (res) => {
         console.log(res)
         const compId = res.data.company.id
         getApp().globalData.user.company_id = compId
 
-        wx.reLaunch({
-          url: '/pages/statistics/statistics',
-        })
+        this.setPageData()
       }
     })
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
+  setPageData: function () {
     let page = this
     let user = getApp().globalData.user.id
+    console.log("checking setpagedata", user)
     const params = {
       user_id: user
     }
@@ -61,18 +46,22 @@ Page({
       data: params,
       method: 'GET',
       success(res){
-        console.log(res)
+        console.log("checking stat onshow", res)
         const stats = res.data.data
         page.setData(stats)
       }
     })
 
     if (getApp().globalData.user.company_id !== null){
+      console.log("company id != null", getApp().globalData.user.company_id)
       let page = this
       const id = getApp().globalData.user.company_id
       const params = {
         company_id: id
       }
+      page.setData({
+        company_id: id
+      })
       wx.request({
         url: getApp().globalData.host + 'api/v1/getcolleagues',
         data: params,
@@ -85,9 +74,6 @@ Page({
         }
       })
     }
-    this.setData({
-      company_id: wx.getStorageSync('company_id') 
-    })
   },
 
   /**

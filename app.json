@@ -8,14 +8,17 @@
     "pages/sandbox/sandbox",
     "pages/result/result",
     "pages/statistics/statistics",
-    "pages/library/library"
+    "pages/library/library",
+    "pages/chapter/chapter"
   ],
   "tabBar": {
+    "color": "red",
     "list": [{
       "pagePath": "pages/index/index",
       "text": "Home",
       "selectedIconPath": "/img/flash-4.png",
-      "iconPath": "/img/flash-3.png"
+      "iconPath": "/img/flash-3.png",
+      "color": "red"
     },
     {
       "pagePath": "pages/library/library",
