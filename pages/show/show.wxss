@@ -120,7 +120,7 @@
 }
 
 .btn {
-  background-color: #1B2A59;
+  background: linear-gradient(to right, #F2C1BD, #1B2A59);
   color: white;
   text-align: center;
   width: 100px;
