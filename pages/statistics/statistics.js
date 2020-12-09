@@ -6,7 +6,7 @@ Page({
 
   },
 
-  onLoad: function (options) {
+  onShow: function (options) {
     event.on("hasUserId", this, this.setPageData)
   },
 
