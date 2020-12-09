@@ -53,7 +53,6 @@
   background-color: #1B2A59;
   color: white;
   transition:background-color 0.25s ease;
-
 }
 
 radio {

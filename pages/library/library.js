@@ -1,4 +1,5 @@
 // pages/library/library.js
+let app = getApp()
 Page({
 
   /**
@@ -17,7 +18,7 @@ Page({
     let page = this
     const query = event.detail.value
     wx.request({
-      url: `http://localhost:3000/api/v1/courses?query=${query}`,
+      url: getApp().globalData.host + `api/v1/courses?query=${query}`,
       success(res) {
         console.log('success?', res)
         const courses = res.data.courses

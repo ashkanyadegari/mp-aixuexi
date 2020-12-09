@@ -2,7 +2,7 @@
 <view class="background">
   <view class="congrats">
     <view class="h1">Quiz Results</view>
-    <view>Earned Points: 80</view>
+    <view>Earned Points: {{points}}</view>
   </view>
 
   <view class="container">

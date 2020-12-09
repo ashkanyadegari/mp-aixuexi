@@ -77,6 +77,11 @@
   justify-content: space-around;
 }
 
+.add-company {
+  width: 90vw;
+  margin-left: 30rpx;
+}
+
 .colleague {
   background-color: white;
   min-width: 90vw;
@@ -150,4 +155,9 @@ button {
 
 .my-learning {
   text-align: center;
+}
+
+button {
+  background-color: #1B2A59;
+  color: white;
 }
