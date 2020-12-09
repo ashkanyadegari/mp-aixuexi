@@ -1,4 +1,6 @@
 //app.js
+import event from 'utils/event'
+
 App({
   onLaunch: function () {
     const host = this.globalData.host
@@ -18,6 +20,7 @@ App({
         console.log(res)
         this.globalData.user = res.data.user
         wx.setStorageSync('company_id', this.globalData.user.company_id)
+        event.emit("hasUserId")
       }
       })
       }

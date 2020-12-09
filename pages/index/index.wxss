@@ -16,6 +16,15 @@
   font-weight: bolder;
 }
 
+.chapter-title {
+  font-size: 48rpx;
+  font-weight: bolder;
+}
+
+.chapter-desc {
+  font-size: 1rem;
+}
+
 .h4 {
   font-weight: bold;
   font-size: 0.9rem;
@@ -215,4 +224,19 @@ text {
   line-height: 1.5em;
   height: 3em;       /* height is 2x line-height, so two lines will display */
   overflow: hidden;  /* prevents extra lines from being visible */
+}
+
+.white {
+  color: white;
+}
+
+.btn-pink {
+  background-color: #F2C1BD;
+}
+
+.a-courses {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+
 }

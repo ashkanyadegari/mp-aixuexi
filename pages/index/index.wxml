@@ -4,38 +4,19 @@
 <view class="h1">Today</view>
 <view class="hero">
   <view class="main-card">
-    <view class="hero-course" data-id="{{courses[3].id}}">
+    <view class="hero-course" data-id="{{chapters[0].id}}" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url({{chapters[0].photos[0]}})">
       <view class="course-content">
-        <image class='hero-image' src="{{courses[3].photos[0]}}" />
         <view class="course-text">
-          <view class="h2">{{courses[3].name}}</view>
+          <view class="chapter-title white">{{chapters[0].name}}</view>
           <view class="herodiv">
-          <text class="nodesc"> {{courses[3].description}}</text>
+          <text class="chapter-desc white"> {{chapters[0].description}}</text>
         </view>
         </view>
       </view>
-      <view class="progress">
-          <view class="progress-box">
-              <progress percent="45" border-radius='5' stroke-width="9" activeColor="#FE564D"/>
-          </view>
+      <view class="h2 white a-courses">
+        Available Courses: {{chapters[0].courses}}
       </view>
-      <view class="card-product-infos">
-        <navigator bindtap="goToShow" data-id="{{courses[3].id}}" class="btn-flat" url="#">Continue</navigator>
-        <view class="avatars">
-          <span class="avatar">
-            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/photo-1491349174775-aaafddd81942.jpeg"/>
-          </span>
-          <!-- <span class="avatar">
-            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/photo-1542103749-8ef59b94f47e.jpeg"/>
-          </span>
-          <span class="avatar">
-            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/photo-1544005313-94ddf0286df2.jpeg"/>
-          </span>
-          <span class="avatar">
-            <image src="https://lewagon.oss-cn-beijing.aliyuncs.com/photo-1570612861542-284f4c12e75f.jpeg"/>
-          </span> -->
-        </view>
-      </view>
+      <navigator data-id="{{chapters[0].id}}" bindtap="goToChapter" class="btn btn-pink" >View Module</navigator>
     </view>
   </view>
 </view>
@@ -57,3 +38,4 @@
   
 </view>
 </view>
+

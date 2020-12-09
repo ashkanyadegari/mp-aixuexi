@@ -1,0 +1,148 @@
+/* pages/chapter/chapter.wxss */
+/* pages/show/show.wxss */
+/* pages/profile/profile.wxss */
+
+.background {
+  background-color: #1B2A59;
+  height: 25vh;
+  border-radius: 0 0 20rpx 20rpx;
+  position: relative;
+}
+
+.course-description {
+  background-color: white;
+  box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
+  height: 150px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+.h1 {
+  font-size: 56rpx;
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.h2 {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.p {
+  font-size: 0.8rem;
+}
+
+.video-card {
+  object-fit: cover;
+  position: absolute;
+  min-width: 90vw;
+  /* margin: 14px; */
+  height: 250rpx;
+  bottom: -45px;
+  box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
+  padding: 15px 5px;
+  border-radius: 15rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.play-button {
+  width: 60px;
+  height: 60px;
+}
+
+.video {
+  display: flex;
+  justify-content: space-around;
+}
+.mypoints {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.total-points {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.points {
+  position: absolute;
+  right: 15px;
+}
+
+.page-content {
+  margin-top: 65px;
+  padding: 0 15px;
+}
+
+.page-content-courses {
+  padding: 0 15px;
+}
+
+
+.h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Course cards */
+
+.course-card {
+  background-color: white;
+  box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
+  border-radius: 10rpx;
+  padding: 25rpx;
+  height: 100px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.course-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-info {
+  margin-left: 8px;
+}
+
+.course-image {
+  min-width: 150rpx;
+  max-height: 150rpx;
+  max-width: 150rpx;
+  min-height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.h4 {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.btn {
+  background-color: #1B2A59;
+  color: white;
+  text-align: center;
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 10rpx;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 0.9rem;
+
+}
+
+.descr {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 250px;
+}
