@@ -22,6 +22,6 @@
 </view>
   <button wx:if="{{currentQuestionId + 1 < questions.length}}" bindtap="next">Next</button>
   <button wx:else bindtap="submitQuiz">Submit</button> 
-  <button wx:if="{{currentQuestionId > 0}}" bindtap="back">Back</button>
+  <button class="btn-bottom"wx:if="{{currentQuestionId > 0}}" bindtap="back">Back</button>
 
   </view>
