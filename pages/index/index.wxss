@@ -83,6 +83,7 @@
   /* margin-top: 70px; */
   width: 90vw;
   padding: 20rpx;
+  background-size:100% 100%;
 }
 .course-content {
   display: flex;

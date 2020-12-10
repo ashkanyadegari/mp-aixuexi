@@ -1,6 +1,6 @@
 <view class="background">
-  <view class="h1">Course {{id}}: {{name}}</view>
-  <view class="video-card" style="background: url({{photos[0]}})">
+  <view class="h1">Module {{id}}: {{name}}</view>
+  <view class="video-card" style="background: url({{photos[0]}});background-size:100% 100%;">
   </view>
 </view>
 
