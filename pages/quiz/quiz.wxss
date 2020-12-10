@@ -13,7 +13,7 @@
   padding: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 90vw;
-  margin: 100px 0;
+  margin: 100px 0 50px 0;
 }
 
 .main-question {
@@ -59,4 +59,10 @@ radio {
 position: fixed;
 opacity: 0;
 pointer-events: none;
+}
+
+button {
+  background: linear-gradient(to right, #F2C1BD, #1B2A59);
+  color: white;
+  margin-bottom: 50rpx;
 }

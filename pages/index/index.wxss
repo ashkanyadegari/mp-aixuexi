@@ -53,8 +53,10 @@
 }
 
 .triangle{
-  width: 50%;
-  height: 10vh;
+  width: 50vw;
+  height: 30vh;
+  top: 0;
+  position: absolute;
 }
 
 .title{
@@ -68,6 +70,7 @@
 .main-card {
   display: flex;
   justify-content: center;
+  padding-top: 10vh;
 }
 
 .hero-course  {

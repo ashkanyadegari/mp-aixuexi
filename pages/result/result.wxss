@@ -1,9 +1,5 @@
 /* pages/result/result.wxss */
 
-.results {
-  display: flex;
-  justify-content: space-around;
-}
 
 .result-card {
   /* height: 100%; */
@@ -37,8 +33,23 @@
   font-weight: bolder;
 }
 
-.container {
-  height: 100vh;
+.results-container {
+  position: absolute;
+  top: 14vh;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  overflow-y: scroll;
+}
+
+.dasole {
+  display: flex;
+  justify-content: space-around;
+}
+
+.results {
+
+  /* justify-content: space-around; */
 }
 
 .congrats {
