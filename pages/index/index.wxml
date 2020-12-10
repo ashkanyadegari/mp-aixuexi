@@ -1,7 +1,7 @@
 
 <!--index.wxml-->
 <view class="background">
-  <view class="triangle"><image src="/img/triangle.svg"/></view>
+  <image class="triangle"src="/img/triangle.svg"/>
 <view class="h1">Today</view>
 <view class="hero">
   <view class="main-card">

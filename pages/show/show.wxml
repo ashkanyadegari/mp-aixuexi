@@ -30,4 +30,6 @@
   </view> -->
 </view>
 
+<view class="dasole">
 <navigator bindtap="goToQuiz" class="btn" data-id="{{id}}" url="#">Start Quiz</navigator>
+</view>
