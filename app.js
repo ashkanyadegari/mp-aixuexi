@@ -34,8 +34,8 @@ App({
   },
   
   globalData: {
-     host: 'http://localhost:3000/',
-  //  host : 'https://aixuexi.wogengapp.cn/',
+    //  host: 'http://localhost:3000/',
+   host : 'https://aixuexi.wogengapp.cn/',
    // ## place holder for dooku server ##
   }
 })
