@@ -1,6 +1,6 @@
 <!--pages/profile/profile.wxml-->
 <view class="background">
-  <view class="triangle"><image src="/img/triangle.svg"/></view>
+  <image class="triangle"src="/img/triangle.svg"/>
   <view class="h1">My Profile</view>
 
   <view class="profile" wx:if="{{user.name != null}}">

@@ -11,7 +11,6 @@
 .course-description {
   background-color: white;
   box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
-  height: 150px;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 10px;
@@ -21,9 +20,8 @@
   font-size: 56rpx;
   color: white;
   font-weight: bolder;
-  position: absolute;
-  left: 15px;
-  top: 15px;
+  /* position: absolute; */
+  margin: 30rpx;
 }
 
 .h2 {
@@ -37,11 +35,9 @@
 
 .video-card {
   object-fit: cover;
-  position: absolute;
-  min-width: 90vw;
+  max-width: 90vw;
   /* margin: 14px; */
   height: 250rpx;
-  bottom: -45px;
   box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
   padding: 15px 5px;
   border-radius: 15rpx;
@@ -76,7 +72,7 @@
 }
 
 .page-content {
-  margin-top: 65px;
+  margin-top: 65rpx;
   padding: 0 15px;
 }
 
@@ -140,10 +136,10 @@
 }
 
 .my-video{
-  position:absolute;
+  /* position:absolute; */
   width:90%;
   height:100%;
-  position: absolute;
+  /* position: absolute; */
   min-width: 90vw;
   /* margin: 14px; */
   height: 250rpx;
@@ -154,4 +150,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
 }
