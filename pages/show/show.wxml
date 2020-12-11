@@ -4,8 +4,8 @@
     <view class="h1">Course {{id}}: {{name}}</view>
     <view wx:if="{{!wechat}}" class="video-card" style="background: url({{photos[0]}});background-size:100% 100%;">
     </view>
-    <view wx:else class="v-wrapper">
-      <video src="{{video}}" style="width:100vw"/>
+    <view wx:else class="v-wrapper" >
+      <video src="{{video}}" class="video-card" style="width: 90vw; height: 23vh;"/>
     </view>
     </view>
     <view class="page-content">

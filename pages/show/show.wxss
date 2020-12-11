@@ -7,7 +7,7 @@
   border-radius: 0 0 20rpx 20rpx;
   position: relative;
 }
-
+/* background-color: rgb(116, 103, 103); */
 .course-description {
   background-color: white;
   box-shadow: 0 0 15rpx rgba(180,180,180,0.3);
