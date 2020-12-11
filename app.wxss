@@ -12,3 +12,11 @@
 Page {
   background-color: #FCFCFC;
 }
+
+.triangle {
+  width: 50vw;
+  height: 30vh;
+  top: 0;
+  position: absolute;
+  left: 0;
+}

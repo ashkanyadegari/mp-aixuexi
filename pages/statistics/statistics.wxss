@@ -37,6 +37,7 @@
   height: 25vh;
   border-radius: 0 0 20rpx 20rpx;
   position: relative;
+  margin-bottom: 100px;
 }
 
 /* My Stats Card */

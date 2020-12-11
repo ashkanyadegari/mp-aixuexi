@@ -2,6 +2,7 @@
 <!--index.wxml-->
 <view class="background">
   <image class="triangle"src="/img/triangle.svg"/>
+
 <view class="h1">Today</view>
 <view class="hero">
   <view class="main-card">
@@ -38,5 +39,5 @@
 </view>
   
 </view>
-</view>
 
+</view>
