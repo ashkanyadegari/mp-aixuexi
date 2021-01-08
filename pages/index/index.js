@@ -48,6 +48,14 @@ Page({
     })
 
   },
+
+  onShareAppMessage: function(event) {
+    console.log('line 53', event)
+  },
+
+  onShareTimeline: function(event) {
+    console.log('Line 57', event);
+  },
   
   goToShow: function(event) {
     const id = event.currentTarget.dataset.id
